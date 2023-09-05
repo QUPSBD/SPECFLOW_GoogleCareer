@@ -1940,7 +1940,7 @@
           }
         }
       },
-      "Selenium.WebDriver/4.12.3": {
+      "Selenium.WebDriver/4.12.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Tokens": "6.19.0",
@@ -1948,10 +1948,10 @@
           "System.Drawing.Common": "7.0.0"
         },
         "compile": {
-          "lib/net6.0/WebDriver.dll": {}
+          "lib/netstandard2.0/WebDriver.dll": {}
         },
         "runtime": {
-          "lib/net6.0/WebDriver.dll": {}
+          "lib/netstandard2.0/WebDriver.dll": {}
         },
         "build": {
           "buildTransitive/Selenium.WebDriver.targets": {}
@@ -5789,28 +5789,21 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "Selenium.WebDriver/4.12.3": {
-      "sha512": "/Ul4afl1w0B3G6JR6Vu3jjR5/LmKoaoDTq8Huw1wo3INR1pFhK+Exi53JymvD9tyT3ZLqjclJBLaLkluqxbpDQ==",
+    "Selenium.WebDriver/4.12.4": {
+      "sha512": "t0YucC2p5SKpWHBrWmR1TdJ/pXBoWyRHVRbs+iy4PPvaowl013e2fzCcdi6Kj1xeZcJ2mCh2V1jDggLHe/83+Q==",
       "type": "package",
-      "path": "selenium.webdriver/4.12.3",
+      "path": "selenium.webdriver/4.12.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "build/Selenium.WebDriver.targets",
         "buildTransitive/Selenium.WebDriver.targets",
         "images/icon.png",
-        "lib/net45/WebDriver.dll",
-        "lib/net46/WebDriver.dll",
-        "lib/net47/WebDriver.dll",
-        "lib/net48/WebDriver.dll",
-        "lib/net5.0/WebDriver.dll",
-        "lib/net6.0/WebDriver.dll",
         "lib/netstandard2.0/WebDriver.dll",
-        "lib/netstandard2.1/WebDriver.dll",
         "manager/linux/selenium-manager",
         "manager/macos/selenium-manager",
         "manager/windows/selenium-manager.exe",
-        "selenium.webdriver.4.12.3.nupkg.sha512",
+        "selenium.webdriver.4.12.4.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
     },
@@ -10737,7 +10730,7 @@
       "FluentAssertions >= 6.12.0",
       "Microsoft.NET.Test.Sdk >= 17.7.2",
       "NUnit3TestAdapter >= 4.5.0",
-      "Selenium.WebDriver >= 4.12.3",
+      "Selenium.WebDriver >= 4.12.4",
       "SpecFlow.NUnit >= 3.9.74",
       "SpecFlow.Plus.LivingDocPlugin >= 3.9.57",
       "nunit >= 3.13.3"
@@ -10800,7 +10793,7 @@
           },
           "Selenium.WebDriver": {
             "target": "Package",
-            "version": "[4.12.3, )"
+            "version": "[4.12.4, )"
           },
           "SpecFlow.NUnit": {
             "target": "Package",

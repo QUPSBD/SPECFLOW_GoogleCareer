@@ -11,68 +11,9 @@ namespace CareerGoogle.StepDefinitions
     public sealed class LoginStepDefinitions
     {
         private IWebDriver driver;
+        public LoginPage loginPage;
 
-        //Locators
-        By signBtn = By.XPath("//a[@class='gc-account-menu-bar__sign-in gc-h-larger-tap-target']");
-        By gmailField = By.XPath("//input[@id='identifierId']");
-        By nextBtn = By.XPath("//span[normalize-space()='Next']");
-        By passField = By.Name("Passwd");
-        By role = By.XPath("//input[@id='inline-search-input-query']");
-        By setRole = By.XPath("//li[@id='autocomplete-result-213-0']");
-        By location = By.XPath("//input[@id='inline-search-input-location']");
-        By setLocation = By.XPath("//li[@id='autocomplete-result-214-0']");
-        By searchOption = By.XPath("//button[@type='submit']");
-        By expand = By.XPath("//li[contains(text(),'Currently pursuing a Bachelor’s, Master’s, or PhD ')]");
-
-
-
-
-
-        // Methods
-        public LoginStepDefinitions(IWebDriver driver)
-        {
-            this.driver = driver;
-        }
-        public IWebElement SignBtn()
-        {
-            return driver.FindElement(signBtn);
-        }
-        public IWebElement GmailField()
-        {
-            return (IWebElement)driver.FindElement(gmailField);
-        }
-        public IWebElement NextBtn()
-        {
-            return (IWebElement)driver.FindElement(nextBtn);
-        }
-        public IWebElement PasswordField()
-        {
-            return (IWebElement)driver.FindElement(passField);
-        }
-        public IWebElement Role()
-        {
-            return (IWebElement)driver.FindElement(role);
-        }
-        public IWebElement SetRole()
-        {
-            return (IWebElement)driver.FindElement(setRole);
-        }
-        public IWebElement Location()
-        {
-            return (IWebElement)driver.FindElement(location);
-        }
-        public IWebElement SetLocation()
-        {
-            return (IWebElement)driver.FindElement(setLocation);
-        }
-        public IWebElement SearchOption()
-        {
-            return (IWebElement)driver.FindElement(searchOption);
-        }
-        public IWebElement ExpandSection()
-        {
-            return (IWebElement)driver.FindElement(expand);
-        }
+       
 
 
     //Stepdefinitions
@@ -80,19 +21,21 @@ namespace CareerGoogle.StepDefinitions
     [Given(@"Open browser")]
         public void GivenOpenBrowser()
         {
-            //driver = new ChromeDriver();
-            //driver.Manage().Window.Maximize();
+            driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
         }
 
         [Given(@"Enter the url")]
         public void GivenEnterTheUrl()
         {
             driver.Url = "https://careers.google.com/";
+            Thread.Sleep(1000);
         }
         [When(@"Click on sign in button")]
         public void WhenClickOnSignInButton()
         {
-           SignBtn().Click();
+           loginPage.SignBtn().Click();
+           Thread.Sleep(1000);
         }
 
         [Then(@"Check that user switch to new window")]
@@ -105,12 +48,13 @@ namespace CareerGoogle.StepDefinitions
         [When(@"enter email and click next")]
         public void WhenEnterEmailAndClickNext()
         {
-            GmailField().SendKeys("taskasignment@gmail.com");
-            NextBtn().Click();
+            loginPage.GmailField().SendKeys("taskasignment@gmail.com");
+            loginPage.NextBtn().Click();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            PasswordField().SendKeys("Asdfgh#123");
+            loginPage.PasswordField().SendKeys("Asdfgh#123");
+                
             Thread.Sleep(1000);
-            NextBtn().Click(); 
+            loginPage.NextBtn().Click(); 
         }
 
         [Then(@"Check that user is in login page")]
@@ -124,13 +68,13 @@ namespace CareerGoogle.StepDefinitions
         public void AndSelectRoleAndLocation()
         {
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            Role().SendKeys("Software Engineer");
+            loginPage.Role().SendKeys("Software Engineer");
             Thread.Sleep(3000);
-            SetRole().Click();
+            loginPage.SetRole().Click();
             Thread.Sleep(2000);
-            Location().SendKeys("dublin");
+            loginPage.Location().SendKeys("dublin");
             Thread.Sleep(3000);
-            SetLocation().Click();
+            loginPage.SetLocation().Click();
             Thread.Sleep(2000);
            
         }
@@ -138,13 +82,13 @@ namespace CareerGoogle.StepDefinitions
         [When(@"Click on the search button")]
         public void WhenClickOnTheSearchButton()
         {
-            SearchOption().Click();
+            loginPage.SearchOption().Click();
             Thread.Sleep(2000);
         }
         [When(@"Click on any position to expand")]
         public void WhenClickOnAnyPositionToExpand()
         {
-            ExpandSection().Click();
+            loginPage.ExpandSection().Click();
             Thread.Sleep(2000);
         }
         

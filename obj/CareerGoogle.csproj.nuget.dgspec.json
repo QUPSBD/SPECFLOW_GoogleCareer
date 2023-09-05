@@ -58,7 +58,7 @@
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[4.12.3, )"
+              "version": "[4.12.4, )"
             },
             "SpecFlow.NUnit": {
               "target": "Package",

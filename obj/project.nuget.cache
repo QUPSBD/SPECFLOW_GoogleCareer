@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fF+E2vbRNRg2qwJQ7teS1sZVgHN9SYpP+P7qWwjOvFKIBQST8DnRhzfszpHmAKAtSVSx4FA/2l50EDt6sdgagQ==",
+  "dgSpecHash": "1RAdKTJsTfj+jzhMyAPaAz+qIKlby0bTIdnl+feGS2rz53jFmIsl+J45KM9PyWbYuZDPPYMTgmbIQTUhrpBHsQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\CRS\\Desktop\\CareerGoogle\\CareerGoogle\\CareerGoogle.csproj",
   "expectedPackageFiles": [
@@ -108,7 +108,7 @@
     "C:\\Users\\CRS\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\CRS\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\CRS\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
-    "C:\\Users\\CRS\\.nuget\\packages\\selenium.webdriver\\4.12.3\\selenium.webdriver.4.12.3.nupkg.sha512",
+    "C:\\Users\\CRS\\.nuget\\packages\\selenium.webdriver\\4.12.4\\selenium.webdriver.4.12.4.nupkg.sha512",
     "C:\\Users\\CRS\\.nuget\\packages\\sharpcompress\\0.23.0\\sharpcompress.0.23.0.nupkg.sha512",
     "C:\\Users\\CRS\\.nuget\\packages\\specflow\\3.9.74\\specflow.3.9.74.nupkg.sha512",
     "C:\\Users\\CRS\\.nuget\\packages\\specflow.internal.json\\1.0.8\\specflow.internal.json.1.0.8.nupkg.sha512",
