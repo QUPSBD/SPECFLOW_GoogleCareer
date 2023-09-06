@@ -13,17 +13,19 @@ namespace CareerGoogle.StepDefinitions
         private IWebDriver driver;
         public LoginPage loginPage;
 
-       
+        public LoginStepDefinitions( IWebDriver driver, LoginPage loginPage) 
+        {
+            this.driver = driver;  
+            this.loginPage = loginPage;
+
+        }
+
+
 
 
     //Stepdefinitions
 
-    [Given(@"Open browser")]
-        public void GivenOpenBrowser()
-        {
-            driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-        }
+  
 
         [Given(@"Enter the url")]
         public void GivenEnterTheUrl()
@@ -34,6 +36,7 @@ namespace CareerGoogle.StepDefinitions
         [When(@"Click on sign in button")]
         public void WhenClickOnSignInButton()
         {
+           Assert.IsTrue(loginPage.SignBtn().Displayed);
            loginPage.SignBtn().Click();
            Thread.Sleep(1000);
         }

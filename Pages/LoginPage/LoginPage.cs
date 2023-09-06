@@ -10,7 +10,7 @@ namespace CareerGoogle.Pages
     public class LoginPage
     {
         private IWebDriver driver;
-        public LoginPage loginPage;
+
 
         //Locators
         By signBtn = By.XPath("//a[@class='gc-account-menu-bar__sign-in gc-h-larger-tap-target']");
@@ -32,7 +32,7 @@ namespace CareerGoogle.Pages
         public LoginPage(IWebDriver driver)
         {
             this.driver = driver;
-           
+            
         }
         public IWebElement SignBtn()
         {
